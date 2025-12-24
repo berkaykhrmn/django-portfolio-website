@@ -16,7 +16,7 @@
     <link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet">
     <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
-    
+
 {% endblock %}
 
 
@@ -24,57 +24,62 @@
 
 <section class="preloader">
     <div class="spinner">
-        <span class="spinner-rotate"></span>    
+        <span class="spinner-rotate"></span>
     </div>
 </section>
 
 <main>
 
 <section class="hero d-flex justify-content-center align-items-center" id="section_1">
+    {% if Homepage %}
     <div class="container">
-        <div class="row">
-
-            <div class="col-lg-7 col-12">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-12 text-center">
                 <div class="hero-text">
-                    <div class="hero-title-wrap d-flex flex-column mb-4">
-                        <h2 class="hero-title ms-3 mb-3">{% translate 'Portfolio Website with Django'%}</h2>
-                        <p class="hero-subtitle ms-3">
-                            {% translate 'This website showcases information about me and my projects. It also serves as a live demonstration of my Django skills, as I manage and update its content through the admin panel. Each new project or learning experience is reflected on the site, highlighting continuous development and improvement.' %}
+                    <div class="hero-title-wrap d-flex flex-column align-items-center mb-4">
+
+                        <div class="hero-title-box d-inline-block mb-3">
+                            <h2 class="hero-title px-4 py-3">{{Homepage.title}}</h2>
+                        </div>
+
+                        <div class="hero-subtitle-box d-inline-block mb-4">
+                            <p class="hero-subtitle px-4 py-3">
+                                {{ Homepage.content|safe|striptags|linebreaksbr }}
+                            </p>
+                        </div>
+
+                        <p class="mb-4">
+                            <a class="custom-btn btn custom-link" href="#section_2">{% translate 'Get Started' %}</a>
                         </p>
-                        <p class="mb-4"><a class="custom-btn btn custom-link" href="#section_2">{% translate 'Get Started' %}</a></p>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-5 col-12 position-relative">
-            </div>
-
         </div>
     </div>
 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#535da1" fill-opacity="1" d="M0,160L24,160C48,160,96,160,144,138.7C192,117,240,75,288,64C336,53,384,75,432,106.7C480,139,528,181,576,208C624,235,672,245,720,240C768,235,816,213,864,186.7C912,160,960,128,1008,133.3C1056,139,1104,181,1152,202.7C1200,224,1248,224,1296,197.3C1344,171,1392,117,1416,90.7L1440,64L1440,0L1416,0C1392,0,1344,0,1296,0C1248,0,1200,0,1152,0C1104,0,1056,0,1008,0C960,0,912,0,864,0C816,0,768,0,720,0C672,0,624,0,576,0C528,0,480,0,432,0C384,0,336,0,288,0C240,0,192,0,144,0C96,0,48,0,24,0L0,0Z"></path>
     </svg>
+    {% endif %}
 </section>
 
-
-<section class="about section-padding" id="section_2">
+<section class="contact section-padding" id="section_2">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-12 mx-auto">
                 <div class="about-thumb">
 
-                   
+
                     <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
                         <h2 class="text-white mb-0">{% translate 'About' %}</h2>
                     </div>
 
-                  
+
                     <div class="mb-5">
                         {{ Abouts.content | safe }}
                     </div>
 
-      
+
                     {% if Abouts and Abouts.skills.all %}
                     <div class="skills-section pt-5">
                         <div class="row">
@@ -87,7 +92,7 @@
                                 <div class="d-flex flex-wrap justify-content-center gap-4">
                                     {% for skill in Abouts.skills.all %}
                                         <p class="mb-4">
-                                    <a class="custom-btn btn custom-link" **href="#" onclick="return false;"**>{{skill.name}}</a>  
+                                    <a class="custom-btn btn custom-link" **href="#" onclick="return false;"**>{{skill.name}}</a>
                                         </p>
                                     {% endfor %}
                                 </div>
@@ -100,10 +105,11 @@
             </div>
         </div>
     </div>
+
 </section>
 
 
-<section class="projects section-padding" id="section_3">
+<section class="contact section-padding" id="section_3">
     <div class="container">
         <div class="col-lg-10 col-12 mx-auto">
             <div class="section-title-wrap d-flex justify-content-center align-items-center mb-5">
@@ -145,7 +151,7 @@
             </div>
 
             <div class="col-lg-8 col-12 mx-auto text-center mb-4">
-                <a href="https://github.com/berkaykhrmn" target="_blank" 
+                <a href="https://github.com/berkaykhrmn" target="_blank"
                    class="custom-btn custom-link btn-sm px-4">
                     GitHub
                 </a>
@@ -157,7 +163,7 @@
 
             <div class="col-lg-8 col-12 mx-auto">
 
-       
+
                 {% if messages %}
                     {% for message in messages %}
                     <div class="alert alert-{{ message.tags|default:'info' }} alert-dismissible fade show" role="alert">
@@ -178,8 +184,8 @@
 
                         <div class="col-12 mb-4">
                             <div class="form-floating">
-                                <input type="email" name="email" id="email" class="form-control" placeholder="{% translate 'E-mail' %}" required>
-                                <label for="email">{% translate 'E-mail' %}</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="{% translate 'e-Mail' %}" required>
+                                <label for="email">{% translate 'e-Mail' %}</label>
                             </div>
                         </div>
 
@@ -190,7 +196,7 @@
                             </div>
                         </div>
                             <div class="col-12 text-center">
-                                <button type="submit" 
+                                <button type="submit"
                                         class="form-control custom-btn custom-link btn-lg px-5">
                                     {% translate 'Send' %}
                                 </button>
