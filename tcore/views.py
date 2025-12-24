@@ -14,7 +14,7 @@ class IndexView(TemplateView):
         context['Abouts'] = About.objects.first()
         context['Projects'] = Project.objects.all().order_by('-id')
         context['setting'] = Setting.objects.first()
-        context['Homepage'] = Homepage.objects.first()
+        context['homepage'] = Homepage.objects.first()
 
         return context
 
