@@ -1,5 +1,5 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import About, Project, Setting
+from .models import About, Project, Setting, Homepage
 
 
 @register(About)
@@ -14,4 +14,6 @@ class ProjectTranslationOptions(TranslationOptions):
 class SettingTranslationOptions(TranslationOptions):
     fields = ('title', 'description', 'keywords',)
 
-
+@register(Homepage)
+class HomepageTranslationOptions(TranslationOptions):
+    fields = ('title', 'content',)
