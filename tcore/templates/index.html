@@ -31,7 +31,7 @@
 <main>
 
 <section class="hero d-flex justify-content-center align-items-center" id="section_1">
-    {% if Homepage %}
+    {% if homepage %}
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-12 text-center">
@@ -39,12 +39,12 @@
                     <div class="hero-title-wrap d-flex flex-column align-items-center mb-4">
 
                         <div class="hero-title-box d-inline-block mb-3">
-                            <h2 class="hero-title px-4 py-3">{{Homepage.title}}</h2>
+                            <h2 class="hero-title px-4 py-3">{{homepage.title}}</h2>
                         </div>
 
                         <div class="hero-subtitle-box d-inline-block mb-4">
                             <p class="hero-subtitle px-4 py-3">
-                                {{ Homepage.content|safe|striptags|linebreaksbr }}
+                                {{ homepage.content|safe|striptags|linebreaksbr }}
                             </p>
                         </div>
 
