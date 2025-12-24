@@ -24,9 +24,16 @@ class About(models.Model):
     title = models.CharField(max_length=200, verbose_name=_("Title"))
     content = RichTextField(verbose_name=_("Content"))
 
+    def __str__(self):
+        return self.title
+
 class Homepage(models.Model):
     title = models.CharField(max_length=200, verbose_name=_("Title"))
     content = RichTextField(verbose_name=_("Content"))
+
+    def __str__(self):
+        return self.title
+    
 
 class Project(models.Model):
     title = models.CharField(max_length=200, verbose_name=_("Title"))
@@ -43,6 +50,9 @@ class Setting(models.Model):
         max_length=255, verbose_name=_("Keywords"))
     email = models.EmailField()
     address = models.TextField(verbose_name=_("Address"))
+
+    def __str__(self):
+        return self.title
 
 class Skill(models.Model):
     about = models.ForeignKey(About, on_delete=models.CASCADE, related_name='skills')
