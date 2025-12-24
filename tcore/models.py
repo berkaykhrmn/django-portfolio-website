@@ -20,11 +20,13 @@ class Contact(models.Model):
     def __str__(self):
         return f"{self.full_name} <{self.email}>"
 
-
 class About(models.Model):
     title = models.CharField(max_length=200, verbose_name=_("Title"))
     content = RichTextField(verbose_name=_("Content"))
 
+class Homepage(models.Model):
+    title = models.CharField(max_length=200, verbose_name=_("Title"))
+    content = RichTextField(verbose_name=_("Content"))
 
 class Project(models.Model):
     title = models.CharField(max_length=200, verbose_name=_("Title"))
