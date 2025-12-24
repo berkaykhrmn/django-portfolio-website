@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import About, Contact, Project, Setting, Skill
+from .models import About, Contact, Project, Setting, Skill, Homepage
 from modeltranslation.admin import TranslationAdmin
 from .admin_mixins import CommonMedia
 
@@ -42,7 +42,9 @@ class AboutAdmin(TranslationAdmin, CommonMedia, admin.ModelAdmin):
 class ProjectAdmin(TranslationAdmin, CommonMedia):
     list_display = ('title', 'link',)
 
-
+@admin.register(Homepage)
+class HomepageAdmin(TranslationAdmin, CommonMedia):
+    list_display = ('title', 'content',)
 
 @admin.register(Setting)
 class SettingAdmin(TranslationAdmin, CommonMedia, admin.ModelAdmin):
