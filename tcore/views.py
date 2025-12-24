@@ -1,10 +1,7 @@
-# views.py
 from django.views.generic import TemplateView
-from django.http import HttpResponseRedirect
-from django.urls import reverse
 from django.core.mail import send_mail
 from django.contrib import messages
-from .models import About, Project, Setting, Contact
+from .models import About, Project, Setting, Contact, Homepage
 from django.shortcuts import redirect 
 from django.conf import settings
 from django.utils.translation import gettext as _
@@ -17,7 +14,8 @@ class IndexView(TemplateView):
         context['Abouts'] = About.objects.first()
         context['Projects'] = Project.objects.all().order_by('-id')
         context['setting'] = Setting.objects.first()
-        
+        context['Homepage'] = Homepage.objects.first()
+
         return context
 
     def post(self, request, *args, **kwargs):
