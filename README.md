@@ -41,22 +41,22 @@ The following software must be installed on your system to run the project:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/bkahraman-python/Portfolio-Website-with-Django.git
-cd Portfolio-Website-with-Django
+git clone https://github.com/berkaykhrmn/django-portfolio-website.git
+cd django-portfolio-website
 ```
 
 ### 2. Create Virtual Environment
 
 **Windows:**
 ```bash
-python3 -m venv venv
-venv\Scripts\activate
+python3 -m venv .venv
+.venv\Scripts\activate
 ```
 
 **macOS/Linux:**
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
 ### 3. Install Dependencies
