@@ -1,4 +1,6 @@
 from django.views.generic import TemplateView
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from django.core.mail import send_mail
 from django.contrib import messages
 from .models import About, Project, Setting, Contact, Homepage
