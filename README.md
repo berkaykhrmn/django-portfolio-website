@@ -1,6 +1,6 @@
 # 🚀 Portfolio Website with Django
 
-A modern and dynamic personal portfolio website built with Django framework. Features a fully responsive design and easy content management through the Django admin panel - a professional portfolio solution that showcases both your projects and your Django development skills.
+A modern and dynamic personal portfolio website built with the Django framework. It features a fully responsive design and easy content management through the Django admin panel, allowing you to showcase your projects and Django development skills effectively.
 
 > **Note:**
 > The HTML–CSS–JS design of this website is based on a pre-made template. I integrated the Django backend myself and customized the template to fit my personal portfolio structure. All backend logic, models, admin configuration, and dynamic content features were developed by me.
