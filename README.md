@@ -13,11 +13,10 @@ A modern and dynamic personal portfolio website built with the Django framework.
 - **Responsive Design**: Perfect appearance across all devices
 - **Working Contact Form**: Connect with visitors through a functional contact form
 - **About Section**: Share your story, skills, and experience
-- **SEO Friendly**: Optimized structure for search engines
 
 ### 🛠️ Technical Features
 - Django framework
-- SQLite database (easily switchable to PostgreSQL for production)
+- SQLite database
 - Responsive frontend with Bootstrap
 - Django Admin panel integration
 - Form validation and security measures
@@ -29,7 +28,7 @@ The following software must be installed on your system to run the project:
 
 - Python 3.8 or higher
 - pip (Python package manager)
-- virtualenv (recommended)
+- virtualenv
 - Git
   
 > **Note:**  
