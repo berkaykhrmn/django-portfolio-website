@@ -4,7 +4,6 @@ A modern and dynamic personal portfolio website built with the Django framework.
 
 ![Django](https://img.shields.io/badge/Django-4.0+-092E20?logo=django)
 ![Python](https://img.shields.io/badge/Python-3.8+-3776AB?logo=python)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-Frontend-7952B3?logo=bootstrap)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
