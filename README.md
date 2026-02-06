@@ -2,11 +2,15 @@
 
 A modern and dynamic personal portfolio website built with the Django framework. It features a fully responsive design and easy content management through the Django admin panel, allowing you to showcase your projects and Django development skills effectively.
 
-![Django](https://img.shields.io/badge/Django-4.0+-092E20?logo=django)
-![Python](https://img.shields.io/badge/Python-3.8+-3776AB?logo=python)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+![Django](https://img.shields.io/badge/Django-6.0+-092E20?logo=django&logoColor=white&style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white&style=for-the-badge)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white&style=for-the-badge)
+![SQLite](https://img.shields.io/badge/SQLite-07405E?logo=sqlite&logoColor=white&style=for-the-badge)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?logo=bootstrap&logoColor=white&style=for-the-badge)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white&style=for-the-badge)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white&style=for-the-badge)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
 > **Note:**
 > The HTML–CSS–JS design of this website is based on a pre-made template. I integrated the Django backend myself and customized the template to fit my personal portfolio structure. All backend logic, models, admin configuration, and dynamic content features were developed by me.
