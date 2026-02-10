@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-24 21:23+0300\n"
+"PO-Revision-Date: 2025-11-26 23:35+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Turkish <tr@li.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: portfolio/settings.py:130
+msgid "Turkish"
+msgstr "Türkçe"
+
+#: portfolio/settings.py:131
+msgid "English"
+msgstr "İngilizce"
+
+#: tcore/models.py:24 tcore/models.py:28 tcore/models.py:32 tcore/models.py:40
+msgid "Title"
+msgstr ""
+
+#: tcore/models.py:25 tcore/models.py:29 tcore/models.py:33 tcore/models.py:41
+#, fuzzy
+#| msgid "Contact"
+msgid "Content"
+msgstr "İletişim"
+
+#: tcore/models.py:34
+msgid "Link"
+msgstr ""
+
+#: tcore/models.py:43
+msgid "Keywords"
+msgstr ""
+
+#: tcore/models.py:45
+msgid "Address"
+msgstr ""
+
+#: tcore/templates/index.html:52
+msgid "Get Started"
+msgstr "Başlayalım"
+
+#: tcore/templates/index.html:74 templates/base.html:33
+msgid "About"
+msgstr "Hakkımda"
+
+#: tcore/templates/index.html:116 templates/base.html:34
+msgid "Projects"
+msgstr "Projeler"
+
+#: tcore/templates/index.html:149 templates/base.html:35
+msgid "Contact"
+msgstr "İletişim"
+
+#: tcore/templates/index.html:180 tcore/templates/index.html:181
+msgid "Full Name"
+msgstr "Ad Soyad"
+
+#: tcore/templates/index.html:187 tcore/templates/index.html:188
+msgid "e-Mail"
+msgstr "e-Posta"
+
+#: tcore/templates/index.html:194 tcore/templates/index.html:195
+msgid "Message"
+msgstr "Mesaj"
+
+#: tcore/templates/index.html:201
+msgid "Send"
+msgstr "Gönder"
+
+#: tcore/views.py:56
+msgid ""
+"Thank you! Your message has been sent successfully. I will get back to you "
+"shortly."
+msgstr ""
+"Teşekkürler! Mesajın başarıyla gönderildi. En kısa sürede dönüş yapacağım."
+
+#: tcore/views.py:60
+msgid "An error occurred while sending the message. Please try again later."
+msgstr "Mesaj gönderilirken bir hata oluştu. Lütfen daha sonra tekrar deneyin."
+
+#: templates/base.html:32
+#, fuzzy
+#| msgid "Homepage"
+msgid "Home"
+msgstr "Anasayfa"
+
+#, fuzzy
+#~| msgid "Portfolio Website with Django"
+#~ msgid "Django Portfolio Website"
+#~ msgstr "Django Portföy Web Sitesi"
+
+#~ msgid "e-mail"
+#~ msgstr "e-posta"
+
+#, fuzzy
+#~| msgid "e-mail"
+#~ msgid "E-mail"
+#~ msgstr "e-posta"
