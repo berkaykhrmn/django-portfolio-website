@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{setting.title}}{% endblock %}
+
+{% block content %}
+
+<main>
+
+<section class="hero" id="section_1">
+    {% if Homepage %}
+    <div class="hero-container">
+        <h1 class="hero-title">
+            <span class="hero-nexus">{{Homepage.title}}</span>
+        </h1>
+        <p class="hero-subtitle">{{ Homepage.content|safe|striptags }}</p>
+        <div class="contact-cta">
+            <a href="#section_2" class="btn-primary">Get Started</a>
+            <a href="#section_4" class="btn-primary">Contact Me</a>
+        </div>
+    </div>
+    {% endif %}
+</section>
+
+<section class="features fade-up" id="section_2">
+    <div class="features-container">
+        <div class="section-header">
+            <h2 class="section-title">About</h2>
+            {% if Abouts %}
+            <div class="section-subtitle about-text">
+                {{ Abouts.content | safe }}
+            </div>
+            {% endif %}
+        </div>
+
+        {% if Abouts and Abouts.skills.all %}
+        <div class="features-grid">
+            {% for skill in Abouts.skills.all %}
+            <div class="feature-card">
+                <h3>{{skill.name}}</h3>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<section class="pricing fade-up" id="section_3">
+    <div class="pricing-container">
+        <div class="section-header">
+            <h2 class="section-title">Projects</h2>
+        </div>
+
+        <div class="pricing-grid">
+            {% for project in Projects %}
+            <div class="pricing-card">
+                <div class="plan-name">{{ project.title }}</div>
+
+                <div class="plan-features-text">
+                    {{ project.content|safe }}
+                </div>
+
+                {% if project.link %}
+                <a href="{{ project.link }}"
+                   class="btn-primary"
+                   target="_blank">
+                    View on GitHub
+                </a>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+<section class="contact fade-up" id="section_4">
+    <div class="contact-container">
+        <div class="section-header">
+            <h2 class="section-title">Contact</h2>
+        </div>
+
+        <div class="contact-intro">
+            <p>You can visit my GitHub profile using the button above. To get in touch, please fill out the contact form below and send me a message. I will do my best to respond as soon as possible.</p>
+        </div>
+
+        <div class="contact-cta">
+            <a href="https://github.com/berkaykhrmn" target="_blank" class="btn-primary">
+                Visit GitHub Profile
+            </a>
+        </div>
+
+        {% if messages %}
+        <div class="form-messages">
+            {% for message in messages %}
+            <div class="alert alert-{{ message.tags|default:'info' }}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="contact-form-wrapper">
+            <form method="post" class="contact-form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">e-Mail</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary btn-submit">Send</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+
+{% if messages %}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('#section_4').scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+{% endif %}
+
+{% endblock %}
