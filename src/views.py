@@ -48,7 +48,7 @@ class IndexView(TemplateView):
                 Admin panel: {request.build_absolute_uri('/admin/')}
                 """,
                 from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=['berkaykahraman27@gmail.com'],
+                recipient_list=['console@local.dev'],
                 fail_silently=False,
             )
             messages.success(request,
