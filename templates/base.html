@@ -1,8 +1,6 @@
 {% load static %}
-{% load i18n %}
-{% get_current_language as CURRENT_LANGUAGE %}
 
-<html lang="{{ CURRENT_LANGUAGE }}">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +15,6 @@
     </div>
 
     <div class="particles" id="particlesContainer"></div>
-
     <div class="data-streams" id="dataStreams"></div>
 
     <div class="orb orb1"></div>
@@ -36,10 +33,10 @@
         <div class="nav-container">
             <a href="{% url 'index' %}" class="logo">Berkay Kahraman</a>
             <ul class="nav-links">
-                <li><a href="#section_1">{% translate 'Home' %}</a></li>
-                <li><a href="#section_2">{% translate 'About' %}</a></li>
-                <li><a href="#section_3">{% translate 'Projects' %}</a></li>
-                <li><a href="#section_4">{% translate 'Contact' %}</a></li>
+                <li><a href="#section_1">Home</a></li>
+                <li><a href="#section_2">About</a></li>
+                <li><a href="#section_3">Projects</a></li>
+                <li><a href="#section_4">Contact</a></li>
             </ul>
             <button class="mobile-menu-button" id="mobileMenuBtn">
                 <div class="hamburger">
@@ -59,10 +56,10 @@
         </div>
         <nav class="mobile-menu-nav">
             <ul>
-                <li><a href="#section_1">{% translate 'Home' %}</a></li>
-                <li><a href="#section_2">{% translate 'About' %}</a></li>
-                <li><a href="#section_3">{% translate 'Projects' %}</a></li>
-                <li><a href="#section_4">{% translate 'Contact' %}</a></li>
+                <li><a href="#section_1">Home</a></li>
+                <li><a href="#section_2">About</a></li>
+                <li><a href="#section_3">Projects</a></li>
+                <li><a href="#section_4">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -72,16 +69,16 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-links">
-                <a href="#section_1">{% translate 'Home' %}</a>
+                <a href="#section_1">Home</a>
                 <span class="footer-separator">•</span>
-                <a href="#section_2">{% translate 'About' %}</a>
+                <a href="#section_2">About</a>
                 <span class="footer-separator">•</span>
-                <a href="#section_3">{% translate 'Projects' %}</a>
+                <a href="#section_3">Projects</a>
                 <span class="footer-separator">•</span>
-                <a href="#section_4">{% translate 'Contact' %}</a>
+                <a href="#section_4">Contact</a>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 <a href="https://github.com/berkaykhrmn" target="_blank">berkaykhrmn</a> | {% translate 'All rights reserved.' %}</p>
+                <p>&copy; 2025 <a href="https://github.com/berkaykhrmn" target="_blank">berkaykhrmn</a></p>
             </div>
         </div>
     </footer>
