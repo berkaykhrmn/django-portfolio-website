@@ -37,7 +37,7 @@ class Project(models.Model):
     link = models.URLField(max_length=500)
     
     class Meta:
-        ordering = ['-created_at']
+        ordering = ['-title']
         verbose_name = "Project"
         verbose_name_plural = "Projects"
 
