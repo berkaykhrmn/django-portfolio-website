@@ -1,25 +1,17 @@
-"""
-Django settings for portfolio project.
-"""
-
 from pathlib import Path
 import os
 from dotenv import load_dotenv
 import dj_database_url
 from django.utils.translation import gettext_lazy as _
 
-# Load environment variables from .env
 load_dotenv()
 
-# Build paths inside the project
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY
-SECRET_KEY = os.getenv('SECRET_KEY', 'dev-secret')  # fallback dev key
+SECRET_KEY = os.getenv('SECRET_KEY', 'dev-secret')
 DEBUG = os.getenv('IS_DEV', 'False') == 'True'
 ALLOWED_HOSTS = os.getenv('APP_HOST', '*').split(',')
 
-# Applications
 INSTALLED_APPS = [
     'ckeditor',
     'django.contrib.admin',
@@ -28,10 +20,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'src'
+    'src',
+    'rest_framework',
 ]
 
-# Middleware
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -45,7 +37,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'config.urls'
 
-# Templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -64,7 +55,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-# Database
 DATABASE_URL = os.getenv("DATABASE_URL")
 if DATABASE_URL:
     DATABASES = {
@@ -78,7 +68,6 @@ else:
         }
     }
 
-# Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
     {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
@@ -86,7 +75,6 @@ AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
 ]
 
-# Internationalization
 LANGUAGE_CODE = 'en'
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'en'
 
@@ -94,20 +82,16 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 WHITENOISE_MANIFEST_STRICT = False
 
-# Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
-# Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Email
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
