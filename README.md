@@ -1,7 +1,7 @@
 # Django Portfolio Website
 
-A modern, cyberpunk-inspired **personal portfolio** built with **Django**.  
-Fully dynamic content managed via the admin panel, responsive design with futuristic animations, and a backend-focused architecture showcasing REST APIs, testing, and production deployment.
+A modern **personal portfolio** built with **Django**.  
+Fully dynamic content managed via the admin panel and a backend-focused architecture showcasing REST APIs, testing, and production deployment.
 
 [![Django](https://img.shields.io/badge/Django-5.2+-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
 [![Django REST Framework](https://img.shields.io/badge/DRF-3.15+-ff1709?style=for-the-badge&logo=django&logoColor=white)](https://www.django-rest-framework.org/)
