@@ -1,38 +1,37 @@
-# Portfolio Website with Django
+# Django Portfolio Website
 
-A modern and dynamic personal portfolio website built with the Django framework. It features a fully responsive design and easy content management through the Django admin panel, allowing you to showcase your projects and Django development skills effectively.
+A modern, cyberpunk-inspired **personal portfolio** built with **Django**.  
+Fully dynamic content managed via the admin panel, responsive design with futuristic animations, and a backend-focused architecture showcasing REST APIs, testing, and production deployment.
 
-![Django](https://img.shields.io/badge/Django-6.0+-092E20?logo=django&logoColor=white&style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white&style=for-the-badge)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?logo=postgresql&logoColor=white&style=for-the-badge)
+[![Django](https://img.shields.io/badge/Django-5.2+-092E20?style=for-the-badge&logo=django&logoColor=white)](https://www.djangoproject.com/)
+[![Python](https://img.shields.io/badge/Python-3.12+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Django REST Framework](https://img.shields.io/badge/DRF-3.15+-ff1709?style=for-the-badge&logo=django&logoColor=white)](https://www.django-rest-framework.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Neon-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://neon.tech/)
 ![SQLite](https://img.shields.io/badge/SQLite-07405E?logo=sqlite&logoColor=white&style=for-the-badge)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?logo=bootstrap&logoColor=white&style=for-the-badge)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white&style=for-the-badge)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white&style=for-the-badge)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+[![Pytest](https://img.shields.io/badge/Tests-Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)](https://pytest.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> **Note:**
-> The frontend (HTML, CSS, JavaScript) of this project is based on a pre-made template.
-I integrated and developed the entire Django backend architecture, including models, admin configuration, database design, environment configuration, and all dynamic content features.
-The template was customized and adapted to fit the project’s structure and functionality.
+> **Frontend Note**  
+> The visual design (HTML/CSS/JS with cyberpunk effects, matrix rain, particles, etc.) is based on a customized template.  
+> **I built and integrated the complete Django backend**: models, views, admin customization, DRF APIs, unit tests, form handling, environment config, Whitenoise static serving, Neon PostgreSQL integration, and Render deployment.
 
 ## Features
 
-### Core Features
-- **Dynamic Content Management**: All content managed through Django admin panel
-- **Project Showcase**: Display your projects with visuals and detailed descriptions
-- **Responsive Design**: Perfect appearance across all devices
-- **Working Contact Form**: Connect with visitors through a functional contact form
-- **About Section**: Share your story, skills, and experience
+### Backend & Core
+- **Dynamic Admin Content Management** — Manage homepage, about section, skills, projects, and contact messages directly from `/admin/`
+- **RESTful API Endpoints** (DRF) — `/api/projects/`, `/api/skills/`, `/api/about/<id>/` for listing & creating content (JSON serialization)
+- **Unit Testing** — Comprehensive tests for models, views, forms, and admin using Django's test framework
+- **Contact Form with Email Notifications** — Secure form submission with validation and console/email backend (async-ready structure via Celery setup in dev)
+- **Responsive & Animated UI** — Mobile-friendly with cyber gradient, matrix rain, data streams, orbs, and glitch effects
+- **SEO & Settings** — Dynamic title, meta, keywords from admin-controlled Setting model
 
-### Technical Features
-- Django framework
-- SQLite database (PostgreSQL for Deployment)
-- Responsive frontend with Bootstrap
-- Django Admin panel integration
-- Form validation and security measures
-- Static and media file management
+## Tech Stack
+
+- **Backend**: Django 5.2+, Django REST Framework
+- **Database**: SQLite (dev) → PostgreSQL (prod)
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Testing**: Django Test Framework / Pytest compatible
+- **Tools**: Git, Whitenoise, python-dotenv, CKEditor
 
 ## Requirements
 
@@ -103,23 +102,15 @@ python3 manage.py collectstatic
 
 ### 7. Environment Variables
 
-You must create a `.env` file in the project root.  
-The project will not work without this file.
+You need to create a .env file in the project root, or rename the .env.example file and update its secret key with your own values.
+The project will not run without this file.
 
-Use the template below as a starting point.  
-Replace the placeholder values with your own credentials.
+Use the provided template as a starting point and replace all placeholder values with your own credentials.
 
 ```env
-# Django Secret Key → MUST be changed!
-SECRET_KEY=replace_this_with_a_real_secret_key
+SECRET_KEY=your-secret-key
 # Generate a secure one:
 # python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
-
-# Development mode
-IS_DEV=True
-
-# Local development
-APP_HOST=127.0.0.1
 ```
 
 ### 8. Start Development Server
@@ -136,22 +127,33 @@ Visit `http://127.0.0.1:8000` in your browser to view your site.
 1. Navigate to `http://127.0.0.1:8000/admin` in your browser
 2. Log in with your superuser credentials
 
-### Content Management
+### Manageable Content
 
-From the admin panel, you can manage the following content:
+- **Homepage**  
+  Update the main hero section title and content (RichTextField support).
 
-- **Projects**: Add, edit, or delete projects
-  - Project name and description
-  - Technologies used
-  - Project link and GitHub repository
-  
-- **About**: Update your personal information
-  - Biography
-  - Skills
-  - Experience
-   
-- **Contact Messages**: View messages from visitors
-  - Message details
-  - Sender information
-  - Date and time
+- **About**  
+  Edit your biography and professional story.  
+  - Biography (rich text)  
+  - **Skills** (inline editing – add/remove skills directly)  
+  - Experience highlights
 
+- **Projects**  
+  Showcase your work with full control:  
+  - Title  
+  - Detailed description (RichTextField)  
+  - External link (e.g., GitHub repo or live demo)  
+  Add, edit, reorder, or delete projects easily.
+
+- **Settings**  
+  Control global site metadata:  
+  - Site title  
+  - Description & keywords (for SEO)  
+  - Contact email & address
+
+- **Contact Messages**  
+  View and manage incoming messages from the contact form:  
+  - Sender full name & email  
+  - Message content  
+  - Received date/time  
+  - Read/unread status
