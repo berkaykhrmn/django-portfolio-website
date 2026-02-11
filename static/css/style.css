@@ -1327,8 +1327,8 @@ nav {
     .nav-links { display: none; }
     .nav-bottom .cyber-button { display: none; }
     .hero-title { font-size: 2.5rem; }
-    .hero-buttons { flex-direction: column; align-items: center; gap: 1rem; }
-    .btn-primary, .btn-secondary { margin: 0; width: 100%; max-width: 300px; }
+    .contact-cta { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; width: 100%; }
+    .btn-primary, .btn-secondary { margin: 0; width: 100%; max-width: 300px; display: inline-block; text-align: center; }
     .features-grid { grid-template-columns: 1fr; }
     .pricing-grid { grid-template-columns: 1fr; }
     .pricing-card.featured { transform: none; }
