@@ -11,7 +11,7 @@ Fully dynamic content managed via the admin panel and a backend-focused architec
 [![Pytest](https://img.shields.io/badge/Tests-Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)](https://pytest.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> **Frontend Note**  
+> **Note**  
 > The visual design (HTML/CSS/JS with cyberpunk effects, matrix rain, particles, etc.) is based on a customized template.  
 > **I built and integrated the complete Django backend**: models, views, admin customization, DRF APIs, unit tests, form handling, environment config, Whitenoise static serving, Neon PostgreSQL integration, and Render deployment.
 
